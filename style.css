@@ -45,6 +45,7 @@ header button{
     border: none;
     background: none;
     width: fit-content;
+    cursor: pointer;
 }
 
 header nav.mobile{
@@ -63,6 +64,10 @@ header nav.mobile{
 
     transition: 0.7s;
    
+}
+
+header .desktop{
+display: none;
 }
 
 header nav.mobile.abrir{
@@ -194,42 +199,13 @@ main{
 }
 
 
+.terceira-secao a{
+    text-decoration: none;
+    
+}
+
 @media(min-width: 1110px){
     
-    main{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1.75rem;
-
-    }
-
-    .primeira-secao{
-        grid-column: 1 / 3;
-        
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1.75rem;
-        
-}
-    
-    
-.primeira-secao picture {
-grid-column: 1 / 3;
-}
-
-.primeira-secao img{
-    margin: 0;
-    
-}
-
-.primeira-secao h1{
-    font-size: 3.5rem;
-}
-
-.segunda-secao h2{
-    font-size: 2.5rem;
-   
-}
     header > button{
         display: none;
     }
@@ -245,5 +221,57 @@ grid-column: 1 / 3;
     text-decoration: none;
     color: var(--gunmetal);
     }
+
+    header .desktop a:hover{
+        color: var(--vermellion);
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.75rem;
+    
+        }
+    
+        .primeira-secao{
+            grid-column: 1 / 3;
+            
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.75rem;
+            
+    }
+        
+        
+    .primeira-secao picture {
+    grid-column: 1 / 3;
+    }
+    
+    .primeira-secao img{
+        margin: 0;
+        
+    }
+    
+    .primeira-secao h1{
+        font-size: 3.5rem;
+    }
+    
+.primeira-secao button:hover{
+    background-color: var(--dark-blue);
+    cursor: pointer;
 }
+
+    .segunda-secao h2{
+        font-size: 2.5rem;
+       
+    }
+
+    .terceira-secao {
+        display: flex;
+        grid-column: 1 / 4;
+    }
+
+    .terceira-secao h2:hover{
+        color: var(--vermellion);
+    }
 }
